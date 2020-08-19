@@ -1,0 +1,41 @@
+ git clone https://github.com/jayita121/108119047
+ cd ~/108119047/ 
+ echo "commit1_master" >> commit1_master.txt
+ git add commit1_master.txt
+ git commit -m 'Initial commit'
+ cd ~/108119047/
+ git branch Develop
+ git checkout Develop
+ echo "commit2_Develop" >> commit2_Develop.txt
+ git add commit2_Develop.txt
+ git commit -m '1st commit in Develop branch'
+ git checkout master
+ echo "commit3_master" >> commit3_master.txt
+ git add commit3_master.txt
+ git commit -m 'commit in master branch'
+ git checkout Develop
+ echo "commit4_Develop" >> commit4_Develop.txt
+ git add commit4_Develop.txt
+ git commit -m '2nd commit in Develop branch'
+ git checkout master
+ git merge Develop
+ git branch spider
+ git checkout spider
+ echo "I am working for the Inductions!" >> file1.txt
+ git add file1.txt
+ git commit -m '1st commit in spider branch'
+ echo "Jayita Indukumar" >> file2.txt
+ git add file2.txt
+ git commit -m '2nd commit in spider branch'
+ git checkout master
+ git merge spider
+ git branch -d Develop
+ git branch -d spider
+ git push origin master
+ 
+ 
+ 
+ 
+ 
+ 
+ 
